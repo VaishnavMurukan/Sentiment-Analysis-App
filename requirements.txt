@@ -1,0 +1,17 @@
+# Core libraries for web scraping and data manipulation
+snscrape
+pandas
+numpy
+
+# Text processing and sentiment analysis
+nltk
+textblob
+vaderSentiment
+
+# Visualization
+matplotlib
+seaborn
+wordcloud
+
+# Utility
+python-dateutil
