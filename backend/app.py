@@ -88,6 +88,22 @@ def generate_suggestions(topic, sentiment_data):
     return all_suggestions[:5]
 
 
+@app.route('/', methods=['GET'])
+def home():
+    """Root endpoint"""
+    return jsonify({
+        'message': 'Sentiment Analysis API',
+        'version': '1.0',
+        'endpoints': {
+            'health': '/api/health',
+            'analyze': '/api/analyze (POST)',
+            'data': '/api/data',
+            'topics': '/api/topics'
+        },
+        'status': 'running'
+    })
+
+
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
