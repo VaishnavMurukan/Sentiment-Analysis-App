@@ -17,7 +17,8 @@ from scrape_tweets import scrape_tweets
 from clean_and_analyze import clean_text, analyze_sentiment, download_nltk_data
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for React frontend
+# Enable CORS for all origins (change to specific domain in production)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Download NLTK data on startup
 download_nltk_data()

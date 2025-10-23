@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Database, Download, ArrowLeft, Filter, Search } from 'lucide-react';
+import API_URL from '../config';
 
 export default function DataViewer() {
   const [data, setData] = useState(null);
@@ -16,7 +17,7 @@ export default function DataViewer() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/data');
+      const response = await fetch(`${API_URL}/api/data`);
       if (!response.ok) {
         throw new Error('No data available. Please run an analysis first.');
       }

@@ -4,6 +4,7 @@ import SearchForm from './components/SearchForm';
 import SentimentCards from './components/SentimentCards';
 import ChartSection from './components/ChartSection';
 import LoadingAnimation from './components/LoadingAnimation';
+import API_URL from './config';
 import './index.css';
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     setResults(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/analyze', {
+      const response = await fetch(`${API_URL}/api/analyze`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
