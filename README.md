@@ -1,4 +1,5 @@
 # Social Media Sentiment Analysis
+https://sentiment-analysis-app-ten.vercel.app/
 
 A complete pipeline for scraping tweets, performing sentiment analysis, and visualizing results using Python.
 
